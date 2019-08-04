@@ -55,9 +55,10 @@ DI to the rescue - mock `Payments` in tests
 
 ## New requirements
 
-- Buy coffee
-- Buy X coffees
-- One charge per credit card
+- Buy coffee <!-- .element: class="fragment fade-in-then-semi-out" data-fragment-index="1" -->
+- Card payment <!-- .element: class="fragment fade-in-then-semi-out" data-fragment-index="1" -->
+- Buy X coffees <!-- .element: class="fragment" data-fragment-index="2" -->
+- One charge per credit card <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
 
@@ -86,6 +87,18 @@ p.charge(cc, cup.price) // <-- Side effect
 ```
 
 Charging the Credit Card prevents composition
+
+---
+
+### BatchPaymentProcessor
+
+A Payment processor that can batch requests for the same Card
+
+- How long do we wait <!-- .element: class="fragment" data-fragment-index="1" -->
+- How many charges do we batch <!-- .element: class="fragment" data-fragment-index="1" -->
+- Does buyCoffee() indicate end <!-- .element: class="fragment" data-fragment-index="1" -->
+
+Also code doesn't fit in a slide <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
 
@@ -134,12 +147,6 @@ fun buyCoffees(
 ```
 
 Removing the side effect makes the function composable.
-
----
-
-## Alternative solution
-
-`BatchPaymentProcessor`
 
 ---
 
