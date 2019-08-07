@@ -195,7 +195,13 @@ fun buyCoffees(
 }
 ```
 
-Removing the side effect makes the function composable. <!-- .element: class="fragment" data-fragment-index="1" -->
+---
+
+## Benefits
+
+- Better testability (no need for mocks) <!-- .element: class="fragment" data-fragment-index="1" -->
+- Composition <!-- .element: class="fragment" data-fragment-index="2" -->
+- Separation of concerns <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
 
